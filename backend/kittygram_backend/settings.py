@@ -11,6 +11,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1',
                  '89.169.170.59',
+                 '79.139.248.252',
                  'klontarf.zapto.org']
 
 INSTALLED_APPS = [
