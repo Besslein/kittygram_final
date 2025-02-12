@@ -17,12 +17,16 @@ services:
     volumes:
       - static:/backend_static
       - media:/app/media
+    depends_on:
+      - db
   frontend:
     image: besslein/kittygram_frontend
     env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
+    depends_on:
+      - backend
   gateway:
     image: besslein/kittygram_gateway
     env_file: .env
@@ -31,3 +35,6 @@ services:
     volumes:
       - static:/static
       - media:/media
+    depends_on:
+      - backend
+      - frontend
