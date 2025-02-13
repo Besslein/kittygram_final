@@ -4,7 +4,7 @@ WORKDIR /app/kittygram_backend
 
 COPY requirements.txt .
 
-RUN pip install -r /app/kittygram_backend/requirements.txt --no-cache-dir
+RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
